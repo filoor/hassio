@@ -1,0 +1,73 @@
+  living_room_tv:
+    name: Tv woonkamer
+    options:
+      - Uit
+      - Plex 
+      - Tv Kijken
+      - Netflix Woonkamer
+      - Youtube Woonkamer
+    initial: Uit
+    icon: mdi:monitor
+  tv_slaapkamer:
+    name: Tv Slaapkamer
+    options:
+      - Uit
+      - Plex 
+      - Tv Kijken
+    initial: Uit
+    icon: mdi:monitor
+  status_huis:
+    name: Huis Mode
+    options:
+      - Thuis
+      - Weg 
+      - Slapen
+      - Vakantie
+    icon: mdi:home
+  wasmachine:
+    name: Wasmachine
+    options:
+      - Stop
+      - Start
+      - Pauzeer
+      - Uitgeschakeld
+  master_sonos:
+    name: Master Sonos Player
+    icon: mdi:itunes
+    options:
+      - Keuken
+      - Woonkamer
+      - Slaapkamer
+#Sonos tarik
+  master_woonkamer_sonos:
+    name: Master Sonos Player
+    icon: mdi:itunes
+    options:
+      - Woonkamer
+      - Keuken
+      - Slaapkamer
+      - Pc Kamer
+  master_keuken_sonos:
+    name: Master Sonos Player
+    icon: mdi:itunes
+    options:
+      - Keuken
+      - Woonkamer
+      - Slaapkamer
+      - Pc Kamer
+  master_slaapkamer_sonos:
+    name: Master Sonos Player
+    icon: mdi:itunes
+    options:
+      - Slaapkamer
+      - Keuken
+      - Woonkamer
+      - Pc Kamer
+  master_pckamer_sonos:
+    name: Master Sonos Player
+    icon: mdi:itunes
+    options:
+      - Pc Kamer
+      - Slaapkamer
+      - Keuken
+      - Woonkamer

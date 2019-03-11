@@ -1,0 +1,79 @@
+  bezoek_thuis:
+    name: Bezoek
+    icon: mdi:human-male
+  auto_lamp_voordeur:
+    name: Auto. Lamp voor
+    icon: mdi:mdi-settings
+  auto_lamp_keuken:
+    name: Auto. Lamp keuken
+    icon: mdi:mdi-settings
+  auto_lamp_hal_beneden:
+    name: Auto. Lamp hal beneden
+    icon: mdi:mdi-settings
+  node_red_watchdog:
+    name: node-red watchdog
+    icon: mdi:mdi-settings
+    initial: on
+  alarm_clock_status:
+    #initial: on
+  wekker_lamp_tarik:
+    name: Wekker Lamp
+  sonos_slaapkamer_slave:
+    name: Slaapkamer
+  sonos_woonkamer_slave:
+    name: Woonkamer
+  sonos_keuken_slave:
+    name: Keuken
+  sonos_pckamer_slave:
+    name: Pc kamer
+#sonos Tarik group
+  sonos_woonkamer_slave_slaapkamer:
+    name: Slaapkamer
+  sonos_woonkamer_slave_woonkamer:
+    name: Woonkamer
+  sonos_woonkamer_slave_keuken:
+    name: Keuken
+  sonos_woonkamer_slave_pckamer:
+    name: Pc Kamer
+  sonos_keuken_slave_slaapkamer:
+    name: Slaapkamer
+  sonos_keuken_slave_woonkamer:
+    name: Woonkamer
+  sonos_keuken_slave_keuken:
+    name: Keuken
+  sonos_keuken_slave_pckamer:
+    name: Pc kamer
+  sonos_slaapkamer_slave_slaapkamer:
+    name: Slaapkamer
+  sonos_slaapkamer_slave_woonkamer:
+    name: Woonkamer
+  sonos_slaapkamer_slave_keuken:
+    name: Keuken
+  sonos_slaapkamer_slave_pckamer:
+    name: Pc Kamer
+  sonos_pckamer_slave_slaapkamer:
+    name: Slaapkamer
+  sonos_pckamer_slave_woonkamer:
+    name: Woonkamer
+  sonos_pckamer_slave_keuken:
+    name: Keuken
+  sonos_pckamer_slave_pckamer:
+    name: Pc Kamer
+  sonos_slaapkamer_groeperen:
+    name: Slaapkamer groeperen
+  sonos_woonkamer_groeperen:
+    name: Woonkamer groeperen
+  sonos_keuken_groeperen:
+    name: Keuken groeperen
+  sonos_pckamer_groeperen:
+    name: Keuken groeperen
+  zigbee_permit_join:
+    name: Zigbee toevoegen
+    initial: off
+    icon: mdi:cellphone-wireless
+  aanuit_openhaard_woonkamer:
+    name: Openhaard
+  hooglaagt_openhaard_felheid_woonkamer:
+    name: felheid
+  neppe_knop:
+    name: Neppe Knop
