@@ -433,20 +433,20 @@
     icon: "mdi:toggle-switch"
     value_template: "{{ value_json.click }}"
     force_update: true
-    name: "Remote Wc 1e"
+    name: "Remote Wc BG"
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/WC BG Knop"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "%"
     device_class: "battery"
     value_template: "{{ value_json.battery }}"
-    name: "Batterij Remote Wc 1e"
+    name: "Batterij Remote Wc BG"
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/WC BG Knop"
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "-"
     value_template: "{{ value_json.linkquality }}"
-    name: "Remote Wc 1er verbinding sterkte"
+    name: "Remote Wc BG verbinding sterkte"
     
     
     ##Hernomen heeft geen naan 
