@@ -147,9 +147,6 @@ ffmpeg:
 sensor: !include sensor.yaml
 logger:
   default: warn
-#  logs:
-#    homeassistant.components.device_tracker: debug
-#    homeassistant.components.camera: critical
     
     
 media_player: !include media_player.yaml
@@ -184,15 +181,6 @@ recorder:
 
 input_boolean: !include input_boolean.yaml
     
-#history_graph:
-#  stroomverbruik:
-#    entities:
-##      - sensor.solaredge_currentpower
-#      - sensor.p1_inkoopnu
-#    hours_to_show: 24
-#    refresh: 60
-#    name: Stroom
-    
 nest:
   client_id: !secret nest_client_id
   client_secret: !secret nest_client_secret
@@ -206,9 +194,7 @@ notify:
     name: Html5
     gcm_api_key: !secret html5_gcm_api_key
     gcm_sender_id: !secret html5_gcm_sender_id
-#  - name: Huis Bot
-#    platform: telegram
-#    chat_id: 190764106
+
     
 input_number: !include input_number.yaml
 
