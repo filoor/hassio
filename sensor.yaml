@@ -427,6 +427,28 @@
     value_template: "{{ value_json.linkquality }}"
     name: "Remote Wc 1er verbinding sterkte"
     
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/WC BG Knop"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:toggle-switch"
+    value_template: "{{ value_json.click }}"
+    force_update: true
+    name: "Remote Wc 1e"
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/WC BG Knop"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "%"
+    device_class: "battery"
+    value_template: "{{ value_json.battery }}"
+    name: "Batterij Remote Wc 1e"
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/WC BG Knop"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+    name: "Remote Wc 1er verbinding sterkte"
+    
+    
     ##Hernomen heeft geen naan 
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/WC BG Motion"
