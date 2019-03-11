@@ -478,7 +478,19 @@
     value_template: "{{ value_json.linkquality }}"
     name: "Deur hall 3e verbinding sterkte"
     
-    
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/TRUST"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    icon: "mdi:gesture-double-tap"
+    value_template: "{{ value_json.action }}"
+    expire_after: 1
+    name: "Remote Trust"
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/TRUST"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    unit_of_measurement: "-"
+    value_template: "{{ value_json.linkquality }}"
+    Name: "Remote Trust verbinding sterkte"
     
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/woonkamer"
