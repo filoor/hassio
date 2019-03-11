@@ -1,0 +1,33 @@
+  - platform: ring
+  - platform: "mqtt"
+    name: "Raam Badkamer"
+    state_topic: "zigbee2mqtt/raam badkamer"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: false
+    payload_off: true
+    value_template: "{{ value_json.contact }}"
+    device_class: "window"
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/WC BG Motion"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: true
+    payload_off: false
+    value_template: "{{ value_json.occupancy }}"
+    device_class: "motion"
+    name: "WC BG Motion"
+  - platform: "mqtt"
+    name: "Deur Washok"
+    state_topic: "zigbee2mqtt/Deur Washok"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: false
+    payload_off: true
+    value_template: "{{ value_json.contact }}"
+    device_class: "window"
+  - platform: "mqtt"
+    name: "Deur hall 3e"
+    state_topic: "zigbee2mqtt/Deur hall 3e"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    payload_on: false
+    payload_off: true
+    value_template: "{{ value_json.contact }}"
+    device_class: "window"

@@ -1,0 +1,89 @@
+  - platform: mqtt
+    name: var_slaaplekker_sonos_notificatie
+    state_topic: "hassio/variable/switch/"
+    command_topic: "hassio/variable/switch/set"
+    payload_on: "ON"
+    payload_off: "OFF"
+    state_on: "ON"
+    state_off: "OFF"
+    optimistic: true
+    qos: 0
+    retain: true
+  - platform: mqtt
+    name: var_deurbel_sonos_notificatie
+    state_topic: "hassio/variable/switch/"
+    command_topic: "hassio/variable/switch/set"
+    payload_on: "ON"
+    payload_off: "OFF"
+    state_on: "ON"
+    state_off: "OFF"
+    optimistic: true
+    qos: 0
+    retain: true
+  - platform: mqtt
+    name: var_backup_nodered
+    state_topic: "hassio/variable/switch/"
+    command_topic: "hassio/variable/switch/set"
+    payload_on: "ON"
+    payload_off: "OFF"
+    state_on: "ON"
+    state_off: "OFF"
+    optimistic: true
+    qos: 0
+    retain: true
+  - platform: mqtt
+    name: var_backup_hassio
+    state_topic: "hassio/variable/switch/"
+    command_topic: "hassio/variable/switch/set"
+    payload_on: "ON"
+    payload_off: "OFF"
+    state_on: "ON"
+    state_off: "OFF"
+    optimistic: true
+    qos: 0
+    
+    retain: true
+  - platform: mqtt
+    name: var_verwarming_amir_blokeren
+    state_topic: "hassio/variable/switch/"
+    command_topic: "hassio/variable/switch/set"
+    payload_on: "ON"
+    payload_off: "OFF"
+    state_on: "ON"
+    state_off: "OFF"
+    optimistic: true
+    qos: 0
+    retain: true
+  - platform: mqtt
+    name: var_verwarming_badkamer_blokeren
+    state_topic: "hassio/variable/switch/"
+    command_topic: "hassio/variable/switch/set"
+    payload_on: "ON"
+    payload_off: "OFF"
+    state_on: "ON"
+    state_off: "OFF"
+    optimistic: true
+    qos: 0
+    retain: true
+  - platform: mqtt
+    name: var_verwarming_pckamer_blokeren
+    state_topic: "hassio/variable/switch/"
+    command_topic: "hassio/variable/switch/set"
+    payload_on: "ON"
+    payload_off: "OFF"
+    state_on: "ON"
+    state_off: "OFF"
+    optimistic: true
+    qos: 0
+    retain: true
+  - platform: mqtt
+    name: var_verwarming_slaapkamer_blokeren
+    state_topic: "hassio/variable/switch/"
+    command_topic: "hassio/variable/switch/set"
+    payload_on: "ON"
+    payload_off: "OFF"
+    state_on: "ON"
+    state_off: "OFF"
+    optimistic: true
+    qos: 0
+    retain: true
