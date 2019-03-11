@@ -1,0 +1,18 @@
+  - platform: sonos
+    hosts:
+    - 192.168.0.122
+    - 192.168.0.85
+    - 192.168.0.58
+    - 192.168.0.94
+  - platform: kodi
+    host: 192.168.0.116
+    port: 80
+    username: !secret osmcwoonkamer_user
+    password: !secret osmcwoonkamer_password
+    name: Kodi Woonkamer
+  - platform: kodi
+    host: 192.168.0.195
+    port: 80
+    username: !secret osmcslaapkamer_user
+    password: !secret osmcslaapkamer_password
+    name: Kodi Slaapkamer

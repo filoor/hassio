@@ -1,0 +1,414 @@
+Woonkamer:
+    name: Woonkamer
+    view: yes
+    entities:
+      - media_player.kodi
+      - camera.kitchen
+      - group.mediawoonkamer
+      - group.greenwave6
+      - group.lampenwoonkamer
+      - group.lampeettafel
+      - group.greenwave6stopcontact
+      - group.greenwave6verbruik
+      - group.climaatwoonkamer
+      - binary_sensor.fibaro_system_fgk101_door_opening_sensor_sensor
+      - binary_sensor.fibaro_system_fgk101_door_opening_sensor_sensor_2
+      - camera.camera_woonkamer
+      
+mediawoonkamer:
+    name: Media
+    entities:
+      - media_player.woonkamer1
+      - input_select.living_room_tv
+lampenwoonkamer:
+    name: Lampen
+    entities:
+      - light.woonkamer_grond
+      - light.zwaveme_zme_0643305433_wall_flushmountable_dimmer_level
+lampeettafel:
+    name: Eettafel
+    entities:
+      - light.fibaro_system_fgd211_universal_dimmer_500w_level
+greenwave6verbruik:
+    name: Verbruik woonkamer
+    entities:
+      - sensor.greenwave_powernode_6_port_energy
+      - sensor.greenwave_powernode_6_port_power
+      - switch.greenwave_powernode_6_port_power
+      - sensor.greenwave_powernode_6_port_energy_2
+      - sensor.greenwave_powernode_6_port_power_2
+      - switch.greenwave_powernode_6_port_power_2
+      - sensor.greenwave_powernode_6_port_energy_3
+      - sensor.greenwave_powernode_6_port_power_3
+      - switch.greenwave_powernode_6_port_power_3
+      - sensor.greenwave_powernode_6_port_energy_4
+      - sensor.greenwave_powernode_6_port_power_4
+      - switch.greenwave_powernode_6_port_power_4
+      - sensor.greenwave_powernode_6_port_energy_5
+      - sensor.greenwave_powernode_6_port_power_5
+      - switch.greenwave_powernode_6_port_power_5
+      - sensor.greenwave_powernode_6_port_energy_6
+      - sensor.greenwave_powernode_6_port_power_6
+      - switch.greenwave_powernode_6_port_power_6
+greenwave6stopcontact:
+    name: Stopcontacten woonkamer
+    entities:
+      - switch.greenwave_powernode_6_port_switch
+      - switch.greenwave_powernode_6_port_switch_2
+      - switch.greenwave_powernode_6_port_switch_3
+      - switch.greenwave_powernode_6_port_switch_4
+      - switch.greenwave_powernode_6_port_switch_5
+      - switch.greenwave_powernode_6_port_switch_6
+climaatwoonkamer:
+    name: Klimaat
+    entities:
+      - climate.woonkamer
+      - sensor.woonkamer_heating
+      - sensor.woonkamer_humidity
+      - sensor.woonkamer_link
+      - sensor.woonkamer_overlay
+      - sensor.woonkamer_power
+      - sensor.woonkamer_tado_mode
+      - sensor.woonkamer_temperature
+      
+halbeneden:
+    name: Hal beneden
+    view: yes
+    entities:
+      - Group.lampenhalbeneden
+      - group.motionsensorhallbeneden
+      
+lampenhalbeneden:
+    name: Lampen
+    entities:
+      - light.hal
+      - switch.qubino_zmnhaa2_flush_1_relay_switch
+#Keuken
+kitchen:
+    name: Keuken
+    view: yes
+    entities:
+      - group.lampenkeuken
+      - group.motionsensorkeuken
+      - group.motionsensorkeukentwee
+      - group.stopcontactvaatasser
+      
+motionsensorkeuken:
+    name: Motion keuken
+    entities:
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor
+      - sensor.fibaro_system_fgms001_motion_sensor_luminance
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature
+      
+motionsensorkeukentwee:
+    name: Motion keuken twee
+    entities:
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_3
+      - sensor.fibaro_system_fgms001_motion_sensor_luminance_3
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature_3
+  
+stopcontactvaatasser:
+    name: Vaatwasser
+    entities:
+      - sensor.greenwave_powernode_1_port_power
+      - sensor.greenwave_powernode_1_port_energy
+      
+lampenkeuken:
+    name: licht
+    entities:
+      - light.hue_keuken_plafon_1
+      - light.hue_keuken_plafon_2
+      - light.hue_keuken_plafon_3
+      - light.spotje_keuken
+  
+motionsensorhallbeneden:
+    name: Hall benden 
+    entities:
+      - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_2
+      - sensor.fibaro_system_fgms001_motion_sensor_luminance_2
+      - sensor.fibaro_system_fgms001_motion_sensor_temperature_2
+  
+badkamer:
+    name: Badkamer
+    view: yes
+    entities:
+      - group.lampenbadkamer
+      - group.climaatbadkamer
+lampenbadkamer:
+    name: Lampen
+    entities:
+      - switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch
+      - switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_2
+climaatbadkamer:
+    name: Klimaat
+    entities:
+      - climate.badkamer
+      - sensor.badkamer_heating
+      - sensor.badkamer_humidity
+      - sensor.badkamer_link
+      - sensor.badkamer_overlay
+      - sensor.badkamer_power
+      - sensor.badkamer_tado_mode
+      - sensor.badkamer_temperature
+amir:
+    name: Amir
+    view: yes
+    entities:
+      - group.lampenslaapkameramir
+      - group.klimaatAmir
+      - camera.camera_amir 
+      
+lampenslaapkameramir:
+    name: Lampen
+    entities:
+      - light.amirtje
+      
+klimaatslaapkamer:
+    name: Klimaat
+    entities: 
+      - climate.slaapkamer
+      - sensor.slaapkamer_heating
+      - sensor.slaapkamer_humidity
+      - sensor.slaapkamer_link
+      - sensor.slaapkamer_overlay
+      - sensor.slaapkamer_power
+      - sensor.slaapkamer_tado_mode
+      - sensor.slaapkamer_temperature
+      
+#Slaapkamer
+Slaapkamer:
+    name: Slaapkamer
+    view: yes
+    entities:
+      - input_select.tv_slaapkamer
+      - group.lampenslaapkamer
+      - group.klimaatslaapkamer
+      - group.alarm_clock
+      - media_player.slaapkamer
+      
+lampenslaapkamer:
+    name: Lampen
+    entities:
+      - light.slaapkamer_tarik
+      - light.slaapkamer_houda
+      
+klimaatAmir:
+    name: Klimaat
+    entities: 
+      - climate.kamer_amir
+      - sensor.kamer_amir_heating
+      - sensor.kamer_amir_humidity
+      - sensor.kamer_amir_link
+      - sensor.kamer_amir_overlay
+      - sensor.kamer_amir_power
+      - sensor.kamer_amir_tado_mode
+      - sensor.kamer_amir_temperature
+      
+climaatslaapkamer:
+    name: Klimaat
+    entities:
+      - climate.slaapkamer
+      - sensor.slaapkamer_heating
+      - sensor.slaapkamer_humidity
+      - sensor.slaapkamer_link
+      - sensor.slaapkamer_overlay
+      - sensor.slaapkamer_power
+      - sensor.slaapkamer_tado_mode
+      - sensor.slaapkamer_temperature
+  
+#PcKamer
+pckamer:
+    name: PC Kamer
+    view: yes
+    entities:
+      - group.stopcontactlaptop
+      - media_player.pckamer
+      - group.lampenpckamer
+      - group.climaatpckamer
+      - sensor.plex
+      - group.sabnzbd
+      - group.transmission
+      - sensor.tvheadend_aantal_streams
+      
+lampenpckamer:
+    name: Lampen
+    entities:
+      - switch.neo_coolcam_wall_switch_1_channel_switch
+      
+climaatpckamer:
+    name: Klimaat
+    entities:
+      - climate.pc_kamer
+      - sensor.pc_kamer_heating
+      - sensor.pc_kamer_humidity
+      - sensor.pc_kamer_link
+      - sensor.pc_kamer_overlay
+      - sensor.pc_kamer_power
+      - sensor.pc_kamer_tado_mode
+      - sensor.pc_kamer_temperature
+      
+sabnzbd:
+    name: SabNzbd
+    entities:
+      - sensor.sab_status
+      - sensor.sab_daily_total
+      - sensor.sab_disk
+      - sensor.sab_disk_free
+      - sensor.sab_left
+      - sensor.sab_monthly_total
+      - sensor.sab_queue
+      - sensor.sab_queue_count
+      - sensor.sab_speed
+      - sensor.sab_total
+      - sensor.sab_weekly_total
+      
+#Garage
+garage:
+    name: Garage
+    view: yes
+    entities:
+      - group.stopcontactgarage
+      - binary_sensor.kaipule_im20_doorwindow_sensor_sensor
+      #- group.sonos_grouping_options
+      
+stopcontactgarage:
+    name: Koelkast
+    entities:
+      - sensor.greenwave_powernode_1_port_power_2
+      - sensor.greenwave_powernode_1_port_energy_2
+      
+#Wooning
+wooning:
+    name: Wooning
+    view: yes
+    entities:
+      - group.solaredge
+      - group.p1monitor
+#      - history_graph.stroom
+      - input_boolean.bezoek_thuis
+      - input_select.status_huis
+      - group.stroom
+      
+solaredge:
+    name: Zonnepanelen
+    entities:
+      - sensor.solaredge_currentpower
+      - sensor.solaredge_lastdayenergy
+      - sensor.solaredge_lastmonthenergy
+      - sensor.solaredge_lastyearenergy
+      - sensor.solaredge_lifetimeenergy
+      - sensor.solaredge_lastupdate
+      
+stroom:
+    name: Stroom
+    entities:
+      - sensor.werkelijk_stroom_verbruik_vandaag
+      - sensor.werkelijk_stroom_verbruik_maand
+      - sensor.werkelijk_stroom_inkoop_vandaag
+      - sensor.werkelijk_stroom_inkoop_maand
+      
+
+transmission:
+      name: transmission
+      entities:
+        - sensor.transmission_active_torrents
+        - sensor.transmission_down_speed
+        - sensor.transmission_paused_torrents
+        - sensor.transmission_status
+        - sensor.transmission_total_torrents
+        - sensor.transmission_up_speed
+        
+p1monitor:
+      name: p1 monitor
+      entities:
+        - sensor.p1_inkoopnu
+        - sensor.p1_leverennuk
+        - sensor.p1_ingekochtvandaag
+        - sensor.p1_verkochtvandaag
+        - sensor.p1_gasverbruiktvandaag
+        - sensor.p1_monitor_v2_geupdateom
+        
+stopcontactlaptop:
+      name: Latop
+      entities:
+        - sensor.fibaro_system_fgwpef_wall_plug_power_4
+        - switch.fibaro_system_fgwpef_wall_plug_switch_2
+        - sensor.fibaro_system_fgwpef_wall_plug_energy_2
+        - sensor.fibaro_system_fgwpef_wall_plug_exporting_2
+        - sensor.fibaro_system_fgwpef_wall_plug_power_3
+        
+washok:
+    name: Washok
+    view: yes
+    entities:
+      - group.wasmasine_status
+    
+Instellingen:
+    name: Instellingen
+    view: yes
+    entities:
+      - group.lampenauto
+      - group.timersauto
+      - sensor.node_red
+      - sensor.processor_use
+      - sensor.nodered_cpu
+      - group.battery_status
+      - group.sonos_grouping_options
+      
+lampenauto:
+    name: Automatiche Lampen
+    entities:
+      -  input_boolean.auto_lamp_hal_beneden
+      -  input_boolean.auto_lamp_keuken
+      -  input_boolean.auto_lamp_voordeur
+      -  input_number.luxhallbeneden
+      -  input_number.luxkeuken
+      
+timersauto:
+    name: Timers
+    entities:
+      -  input_number.timertvslaapkamer
+      
+alarm_clock:
+    name: 'Alarm klok'
+    entities:
+      - sensor.alarm_clock_time
+      - input_number.alarm_clock_hour
+      - input_number.alarm_clock_minute
+      - input_boolean.alarm_clock_status
+      - input_number.alarm_clock_volume
+      - input_boolean.wekker_lamp_tarik
+      
+battery_status:
+    name: 'battery'
+    entities:
+      - sensor.battery_deursensor_tuin
+      - sensor.battery_deursensor_voor
+      - sensor.battery_motionhall_beneden
+      - sensor.battery_motionkeuken
+      - sensor.battery_motionkeuken_twee
+      - sensor.battery_garagetuindeursensor_tuin
+      
+wasmasine_status:
+    name: 'Wasmachine'
+    entities:
+      - input_select.wasmachine
+      - sensor.wasmachine_klaar_in
+      
+sonos_grouping_options:
+    view: yes
+    name: Groep Sonos Spelers
+    control: hidden
+    entities:
+      - input_select.master_sonos
+      - input_boolean.sonos_woonkamer_slave
+      - input_boolean.sonos_keuken_slave
+      - input_boolean.sonos_slaapkamer_slave
+      - script.sonos_group_speakers
+zigbee_group:
+    view: yes
+    name: Zigbee
+    entities:
+      - input_boolean.zigbee_permit_join
+      - timer.zigbee_permit_join
+      - sensor.bridge_status

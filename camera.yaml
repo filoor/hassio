@@ -1,0 +1,13 @@
+  - platform: mjpeg
+    mjpeg_url: http://192.168.0.163:8081/mjpg/cam2
+    name: Camera Woonkamer
+    username: !secret cam1_user
+    password: !secret cam1_password
+    authentication: basic
+  - platform: mjpeg
+    mjpeg_url: http://192.168.0.163:8081/mjpg/cam1
+    name: Camera Amir
+    username: !secret cam2_user
+    password: !secret cam2_password
+    authentication: basic
+  - platform: ring
