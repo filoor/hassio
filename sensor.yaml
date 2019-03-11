@@ -60,7 +60,7 @@
   - platform: tautulli
     api_key: !secret tautulli_api_key
     host: 192.168.0.114
-    attributes:
+    monitored_conditions:
       - magic_title
       - stream_bitrate
       - bandwidth
