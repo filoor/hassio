@@ -1,0 +1,201 @@
+  - platform: mqtt
+    schema: json
+    state_topic: "zigbee2mqtt/logeerkamer"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    color_temp: true
+    xy: true
+    command_topic: "zigbee2mqtt/logeerkamer/set"
+    name: logeerkamer
+  - platform: mqtt
+    schema: json
+    state_topic: "zigbee2mqtt/woonkamer"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    command_topic: "zigbee2mqtt/woonkamer/set"
+    name: Woonkamer grond
+  - platform: mqtt
+    schema: json
+    state_topic: "zigbee2mqtt/Hal BG"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    command_topic: "zigbee2mqtt/Hal BG/set"
+    name: Hal BG
+  - platform: mqtt
+    schema: json
+    state_topic: "zigbee2mqtt/spotje keuken"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    color_temp: true
+    command_topic: "zigbee2mqtt/spotje keuken/set"
+    name: Spotje keuken
+  - platform: mqtt
+    schema: json
+    state_topic: "zigbee2mqtt/keuken plafon 1"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    color_temp: true
+    command_topic: "zigbee2mqtt/keuken plafon 1/set"
+    name: "hue keuken Plafon 1"
+  - platform: mqtt
+    schema: json
+    state_topic: "zigbee2mqtt/keuken plafon 2"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    color_temp: true
+    command_topic: "zigbee2mqtt/keuken plafon 2/set"
+    name: "hue keuken Plafon 2"
+  - platform: mqtt
+    schema: json
+    state_topic: "zigbee2mqtt/keuken plafon 3"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    color_temp: true
+    command_topic: "zigbee2mqtt/keuken plafon 3/set"
+    name: "hue keuken Plafon 3"
+  - platform: mqtt
+    schema: json
+    state_topic: "zigbee2mqtt/slaapkamer tarik"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    color_temp: true
+    command_topic: "zigbee2mqtt/slaapkamer tarik/set"
+    name: "hue Slaapkamer Tarik"
+  - platform: mqtt
+    schema: json
+    state_topic: "zigbee2mqtt/slaapkamer houda"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    color_temp: true
+    command_topic: "zigbee2mqtt/slaapkamer houda/set"
+    name: "hue Slaapkamer Houda"
+  - platform: mqtt
+    schema: json
+    state_topic: "zigbee2mqtt/slaapkamer amir"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    command_topic: "zigbee2mqtt/slaapkamer amir/set"
+    name: hue Slaapkamer Amir
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/WC BG"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/WC BG/set"
+    name: Tradfri Wc BG
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/WC 1e"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/WC 1e/set"
+    name: Tradfri Wc 1e
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/hal 2e up"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/hal 2e up/set"
+    name: Tradfri Hal 2e ver omhoog
+  - platform: "mqtt"
+    state_topic: "zigbee2mqtt/hal 2e down"
+    availability_topic: "zigbee2mqtt/bridge/state"
+    brightness: true
+    schema: "json"
+    command_topic: "zigbee2mqtt/hal 2e down/set"
+    name: Tradfri Hal 2e ver omlaag
+  - platform: mqtt
+    schema: json
+    name: "Groep keuken Lampen"
+    command_topic: "zigbee2mqtt/keuken_lampen/set"
+    state_topic: "zigbee2mqtt/keuken_lampen/set"
+    color_temp: true
+    brightness: true
+  - platform: mqtt
+    schema: json
+    name: "Groep lampen hal 2e"
+    command_topic: "zigbee2mqtt/group_hal_2e_lampen/set"
+    state_topic: "zigbee2mqtt/group_hal_2e_lampen/set"
+    brightness: true
+    
+    
+  - platform: template
+    lights:
+      badkamer_spiegel_zwave:
+        friendly_name: 'Spiegel'
+        level_template: '{{ 255 if is_state("switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch", "on") else 0 }}'
+        value_template: '{{ is_state("switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch", "on") }}'
+        turn_on:
+          service: switch.turn_on
+          entity_id: switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch
+        turn_off:
+          service: switch.turn_off
+          entity_id: switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch
+        set_level:
+          service_template: switch.turn_'{{ "off" if brightness == 0 else "on" }}'
+          entity_id: switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch
+      badkamer_plafon_zwave:
+        friendly_name: 'Plafon'
+        level_template: '{{ 255 if is_state("switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_2", "on") else 0 }}'
+        value_template: '{{ is_state("switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_2", "on") }}'
+        turn_on:
+          service: switch.turn_on
+          entity_id: switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_2
+        turn_off:
+          service: switch.turn_off
+          entity_id: switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_2
+        set_level:
+          service_template: switch.turn_'{{ "off" if brightness == 0 else "on" }}'
+          entity_id: switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_2
+      kantoor_plafon_zwave:
+        friendly_name: 'Plafon'
+        level_template: '{{ 255 if is_state("switch.neo_coolcam_wall_switch_1_channel_switch", "on") else 0 }}'
+        value_template: '{{ is_state("switch.neo_coolcam_wall_switch_1_channel_switch", "on") }}'
+        turn_on:
+          service: switch.turn_on
+          entity_id: switch.neo_coolcam_wall_switch_1_channel_switch
+        turn_off:
+          service: switch.turn_off
+          entity_id: switch.neo_coolcam_wall_switch_1_channel_switch
+        set_level:
+          service_template: switch.turn_'{{ "off" if brightness == 0 else "on" }}'
+          entity_id: switch.neo_coolcam_wall_switch_1_channel_switch
+      buitenlamp_voor_zwave:
+        friendly_name: 'Buiten voor'
+        level_template: '{{ 255 if is_state("switch.qubino_zmnhaa2_flush_1_relay_switch", "on") else 0 }}'
+        value_template: '{{ is_state("switch.qubino_zmnhaa2_flush_1_relay_switch", "on") }}'
+        turn_on:
+          service: switch.turn_on
+          entity_id: switch.qubino_zmnhaa2_flush_1_relay_switch
+        turn_off:
+          service: switch.turn_off
+          entity_id: switch.qubino_zmnhaa2_flush_1_relay_switch
+        set_level:
+          service_template: switch.turn_'{{ "off" if brightness == 0 else "on" }}'
+          entity_id: switch.qubino_zmnhaa2_flush_1_relay_switch
+      washok_plafon_zwave:
+        friendly_name: 'Lamp'
+        level_template: '{{ 255 if is_state("switch.fibaro_system_fgs212_switch_3kw_switch_3", "on") else 0 }}'
+        value_template: '{{ is_state("switch.fibaro_system_fgs212_switch_3kw_switch_3", "on") }}'
+        turn_on:
+          service: switch.turn_on
+          entity_id: switch.fibaro_system_fgs212_switch_3kw_switch_3
+        turn_off:
+          service: switch.turn_off
+          entity_id: switch.fibaro_system_fgs212_switch_3kw_switch_3
+        set_level:
+          service_template: switch.turn_'{{ "off" if brightness == 0 else "on" }}'
+          entity_id: switch.fibaro_system_fgs212_switch_3kw_switch_3
+      slaapkamer_spiegel_zwave:
+        friendly_name: 'Spiegel'
+        level_template: '{{ 255 if is_state("switch.fibaro_system_fgwpef_wall_plug_switch_2", "on") else 0 }}'
+        value_template: '{{ is_state("switch.fibaro_system_fgwpef_wall_plug_switch_2", "on") }}'
+        turn_on:
+          service: switch.turn_on
+          entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_2
+        turn_off:
+          service: switch.turn_off
+          entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_2
+        set_level:
+          service_template: switch.turn_'{{ "off" if brightness == 0 else "on" }}'
+          entity_id: switch.fibaro_system_fgwpef_wall_plug_switch_2
