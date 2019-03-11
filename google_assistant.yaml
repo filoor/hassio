@@ -1,0 +1,140 @@
+  project_id: google_assistant_project_id
+  api_key: !secret google_assistant_api_key
+  exposed_domains:
+#    - switch
+#    - light
+#    - group
+    - media_player
+  entity_config:
+    group.lampenkeuken:
+      name: Keuken Lampen
+      aliases:
+        - bright lights
+        - entry lights
+    light.plafon_woonkamer_level:
+      name: Plafondlamp
+      aliases:
+        - plafond
+        - plafonlamp
+        - plafond lamp
+      expose: true
+      room: Woonkamer
+    light.woonkamer_grond:
+      name: Vloerlamp
+      expose: true
+      room: Woonkamer
+      aliases:
+        - Grondlamp
+        - lamp grond
+        - grond
+        - Vloer
+        - Vloerlamp
+    input_boolean.aanuit_openhaard_woonkamer:
+      name: Openhaard
+      expose: true
+      room: Woonkamer
+    light.hue_keuken_plafon_1:
+      name: lamp 1
+      expose: true
+      room: keuken
+    light.hue_keuken_plafon_2:
+      name: lamp 2
+      expose: true
+      room: keuken
+    light.hue_keuken_plafon_3:
+      name: lamp 3
+      expose: true
+      room: keuken
+    light.spotje_keuken:
+      name: spotje
+      expose: true
+      room: keuken
+    light.hal_bg:
+      name: lamp
+      expose: true
+      room: Hal benden
+    light.buitenlamp_voor_zwave:
+      name: buiten lamp
+      expose: true
+      room: Hal benden
+    light.badkamer_plafon_zwave:
+      name: plafon
+      expose: true
+      room: Badkamer
+    light.badkamer_spiegel_zwave:
+      name: spiegel
+      expose: true
+      room: Badkamer
+    light.logeerkamer:
+      name: plafon
+      expose: true
+      room: Logeerkamer
+    light.kantoor_plafon_zwave:
+      name: plafon
+      expose: true
+      room: Kantoor
+    light.hue_slaapkamer_amir:
+      name: plafon
+      expose: true
+      room: Kamer Amir
+    light.hue_slaapkamer_tarik:
+      name: Tarik
+      expose: true
+      room: Slaapkamer
+    light.hue_slaapkamer_houda:
+      name: Houda
+      expose: true
+      room: Slaapkamer
+    switch.greenwave_powernode_6_port_switch:
+      name: Camera
+      expose: true
+      room: Woonkamer
+    light.fibaro_system_fgd211_universal_dimmer_500w_level:
+      name: Eettafel
+      aliases:
+        - eettafel lamp
+        - lamp eettafel
+      expose: yes
+      room: Woonkamer
+    binary_sensor.tuindeur_sensor:
+      name: tuindeur
+      expose: yes
+      room: Woonkamer
+    light.washok_plafon_zwave:
+      name: Eettafel
+      aliases:
+        - lamp
+        - plafonlamp
+        - licht
+      expose: yes
+      room: Washok
+    light.slaapkamer_spiegel_zwave:
+      name: Spiegel
+      aliases:
+        - spiegel
+        - make-up spiegel
+        - opmaakspiegel
+      expose: yes
+      room: Logeerkamer
+    light.groep_lampen_hal_2e:
+      name: Hal Zolder
+      aliases:
+        - Hal zolder
+        - hal 2e verdieping
+        - hal tweede verdieping
+      expose: yes
+      room: Hal zolder
+    light.tradfri_wc_bg:
+      name: Lamp WC Beneden
+      aliases:
+        - WC Beneden
+        - WC Begane grond
+      expose: yes
+      room: WC BG
+    light.tradfri_wc_1e:
+      name: Lamp WC Beneden
+      aliases:
+        - WC Boven
+        - WC eerste verdieping
+      expose: yes
+      room: WC Boven
