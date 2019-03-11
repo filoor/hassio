@@ -1,0 +1,195 @@
+device_tracker.tarik:
+  friendly_name: Account
+switch.qubino_zmnhaa2_flush_1_relay_switch:
+  friendly_name: Buitenlamp voor
+  device_class: light
+sensor.time:
+  hidden: true
+sensor.alarm_clock_hour:
+  hidden: true
+sensor.alarm_clock_minute:
+  hidden: true
+sensor.alarm_clock_time_long:
+  hidden: true
+sensor.alarm_clock_time:
+  friendly_name: Alarm klok ingesteld
+  icon: mdi:alarm
+input_number.alarm_clock_hour:
+  friendly_name: Uur
+  icon: mdi:timer
+input_number.alarm_clock_minute:
+  friendly_name: Min
+  icon: mdi:timer
+input_boolean.alarm_clock_status:
+  friendly_name: Alarm klok Status
+  icon: mdi:alarm-check
+input_number.alarm_clock_volume:
+  friendly_name: Alarm klok Volume
+  icon: mdi:volume-high
+input_select.tv_slaapkamer:
+  order: 1
+sensor.nodered_cpu:
+  icon: mdi:memory
+input_select.living_room_tv:
+  icon_template: '{% if is_state(''input_select.living_room_tv'', ''Netflix Woonkamer'')
+    %} mdi:netflix{% else %}mdi:monitor{% endif %}'
+sensor.houda_afstand:
+  icon: mdi:map-marker-distance
+sensor.tarik_afstand:
+  icon: mdi:map-marker-distance
+sensor.houda_tijd:
+  icon: mdi:clock-outline
+sensor.tarik_tijd:
+  icon: mdi:clock-outline
+binary_sensor.neo_coolcam_doorwindow_detector_sensor:
+  friendly_name: Raam Woonkamer
+  device_class: window
+binary_sensor.tuindeur_sensor:
+  device_class: door
+binary_sensor.kaipule_im20_doorwindow_sensor_sensor:
+  device_class: door
+binary_sensor.voordeur_sensor:
+  device_class: door
+sensor.battery_deursensor_tuin:
+  device_class: battery
+sensor.battery_deursensor_voor:
+  device_class: battery
+sensor.battery_motionhall_beneden:
+  device_class: battery
+sensor.battery_motionkeuken:
+  device_class: battery
+sensor.battery_motionkeuken_twee:
+  device_class: battery
+sensor.battery_garagetuindeursensor_tuin:
+  device_class: battery
+sensor.battery_woonkamerraam_tuin:
+  device_class: battery
+switch.greenwave_powernode_6_port_switch:
+  device_class: plug
+switch.greenwave_powernode_6_port_switch_2:
+  device_class: plug
+switch.greenwave_powernode_6_port_switch_3:
+  device_class: plug
+switch.greenwave_powernode_6_port_switch_4:
+  device_class: plug
+switch.greenwave_powernode_6_port_switch_5:
+  device_class: plug
+switch.greenwave_powernode_6_port_switch_6:
+  device_class: plug
+switch.fibaro_system_fgwpef_wall_plug_switch_2:
+  device_class: plug
+switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch:
+  device_class: light
+switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_2:
+  device_class: light
+binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_2:
+  device_class: motion
+binary_sensor.fibaro_system_fgms001_motion_sensor_sensor:
+  device_class: motion
+binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_3:
+  device_class: motion
+binary_sensor.neo_coolcam_doorwindow_detector_sensor_2:
+  friendly_name: Raam Keuken
+  device_class: window
+sensor.tvheadend_server_cpu:
+  icon: mdi:memory
+input_boolean.sonos_keuken_slave:
+  entity_picture: /local/icoon/play3wit.png
+input_boolean.sonos_woonkamer_slave:
+  entity_picture: /local/icoon/sonosplaybar.png
+input_boolean.sonos_slaapkamer_slave:
+  entity_picture: /local/icoon/play1zwart.png
+input_boolean.sonos_keuken_slave_keuken:
+  entity_picture: /local/icoon/play3wit.png
+input_boolean.sonos_keuken_slave_slaapkamer:
+  entity_picture: /local/icoon/play1zwart.png
+input_boolean.sonos_keuken_slave_woonkamer:
+  entity_picture: /local/icoon/sonosplaybar.png
+input_boolean.sonos_slaapkamer_slave_keuken:
+  entity_picture: /local/icoon/play3wit.png
+input_boolean.sonos_slaapkamer_slave_slaapkamer:
+  entity_picture: /local/icoon/play1zwart.png
+input_boolean.sonos_slaapkamer_slave_woonkamer:
+  entity_picture: /local/icoon/sonosplaybar.png
+input_boolean.sonos_woonkamer_slave_keuken:
+  entity_picture: /local/icoon/play3wit.png
+input_boolean.sonos_woonkamer_slave_slaapkamer:
+  entity_picture: /local/icoon/play1zwart.png
+input_boolean.sonos_woonkamer_slave_woonkamer:
+  entity_picture: /local/icoon/sonosplaybar.png
+input_boolean.sonos_pckamer_slave:
+  entity_picture: /local/icoon/one1wit.png
+input_boolean.sonos_woonkamer_slave_pckamer:
+  entity_picture: /local/icoon/one1wit.png
+input_boolean.sonos_keuken_slave_pckamer:
+  entity_picture: /local/icoon/one1wit.png
+input_boolean.sonos_slaapkamer_slave_pckamer:
+  entity_picture: /local/icoon/one1wit.png
+input_boolean.sonos_pckamer_slave_slaapkamer:
+  entity_picture: /local/icoon/play1zwart.png
+input_boolean.sonos_pckamer_slave_woonkamer:
+  entity_picture: /local/icoon/play1zwart.png
+input_boolean.sonos_pckamer_slave_keuken:
+  entity_picture: /local/icoon/play3wit.png
+input_boolean.sonos_pckamer_slave_pckamer:
+  entity_picture: /local/icoon/one1wit.png
+input_boolean.verwarming_amir_blokeren:
+  device_class: lock
+input_boolean.verwarming_badkamer_blokeren:
+  device_class: lock
+input_boolean.verwarming_pckamer_blokeren:
+  Device class: lock
+input_boolean.verwarming_slaapkamer_blokeren:
+  device_class: lock
+input_boolean.aanuit_backup_hassio:
+  icon: mdi:backup-restore
+input_boolean.aanuit_backup_nodered:
+  icon: mdi:backup-restore
+input_number.timertvslaapkamer:
+  icon: mdi:camera-timer
+  unit_of_measurement: Min
+input_number.timerlampkeuken:
+  icon: mdi:camera-timer
+  unit_of_measurement: Min
+input_number.timerlamphalbeneden:
+  icon: mdi:camera-timer
+  unit_of_measurement: Min
+input_number.luxhallbeneden:
+  unit_of_measurement: Lux
+input_number.luxkeuken:
+  unit_of_measurement: Lux
+input_boolean.aanuit_openhaard_woonkamer:
+  icon: mdi:fire
+input_boolean.hooglaagt_openhaard_felheid_woonkamer:
+  icon: mdi:brightness-auto
+sensor.battery_hueremote_amir:
+  device_class: battery
+sensor.battery_hueremote_keuken:
+  device_class: battery
+sensor.battery_hueremote_logeerkamer:
+  device_class: battery
+sensor.processor_use:
+  friendly_name: CPU
+  icon: mdi:memory
+sensor.zigbee2mqtt_cpu:
+  icon: mdi:memory
+sensor.disk_free:
+  friendly_name: HDD vrij
+light.woonkamer_grond:
+  friendly_name: Grond
+sensor.snelheid_tel_tarik:
+  icon: mdi:speedometer
+binary_sensor.badkamer_raam:
+  device_class: window
+switch.slaaplekker_sonos_notificatie:
+  friendly_name: slaaplekker Sonos
+switch.deurbel_sonos_notificatie:
+  friendly_name: Deurbel sonos
+switch.var_backup_hassio:
+  friendly_name: Backup Hassio
+switch.var_backup_nodered:
+  friendly_name: Backup Node-Red
+switch.var_deurbel_sonos_notificatie:
+  friendly_name: Sonos Deurbel
+switch.var_slaaplekker_sonos_notificatie:
+  friendly_name: Sonos Slaaplekker
