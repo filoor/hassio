@@ -512,7 +512,7 @@
     availability_topic: "zigbee2mqtt/bridge/state"
     unit_of_measurement: "-"
     value_template: "{{ value_json.linkquality }}"
-    Name: "Remote Trust verbinding sterkte"
+    name: "Remote Trust verbinding sterkte"
     
   - platform: "mqtt"
     state_topic: "zigbee2mqtt/woonkamer"
