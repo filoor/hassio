@@ -1,8 +1,3 @@
-#  - platform: plex
-#    host: 192.168.0.114
-#    port: 32400
-#    name: Plex
-#    token: !secret plex_token
   - platform: postnl
     username: !secret email_user
     password: !secret postnl_password
