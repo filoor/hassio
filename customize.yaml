@@ -154,6 +154,9 @@ input_number.timerlampkeuken:
 input_number.timerlamphalbeneden:
   icon: mdi:camera-timer
   unit_of_measurement: Min
+input_number.timerwcbg:
+  icon: mdi:camera-timer
+  unit_of_measurement: Min
 input_number.luxhallbeneden:
   unit_of_measurement: Lux
 input_number.luxkeuken:
