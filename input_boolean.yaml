@@ -10,6 +10,9 @@
   auto_lamp_hal_beneden:
     name: Auto. Lamp hal beneden
     icon: mdi:mdi-settings
+  auto_lamp_wc_bg_beneden:
+    name: Auto. Lamp Wc Bg beneden
+    icon: mdi:mdi-settings
   node_red_watchdog:
     name: node-red watchdog
     icon: mdi:mdi-settings
